@@ -70,7 +70,7 @@ class Scraper < ApplicationRecord
                   sold_date = Chronic.parse(fetched_date)
                   puts "House details price = #{price} // soldDate = #{sold_date} // address = #{address} // house-details = #{home_details} //"
 
-                  self.find_or_create_by(date: sold_date, address: address, price: price, home_details: home_details)
+                  Scraper.find_or_create_by(date: sold_date, address: address, price: price, home_details: home_details)
                 end
               end
             elsif page == pagination
@@ -89,7 +89,7 @@ class Scraper < ApplicationRecord
                   sold_date = Chronic.parse(fetched_date)
                   puts "House details price = #{price} // soldDate = #{sold_date} // address = #{address} // house-details = #{home_details} //"
 
-                  self.find_or_create_by(date: sold_date, address: address, price: price, home_details: home_details)
+                  Scraper.find_or_create_by(date: sold_date, address: address, price: price, home_details: home_details)
                 end
               end
             end
