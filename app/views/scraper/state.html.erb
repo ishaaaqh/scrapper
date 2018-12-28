@@ -1,0 +1,25 @@
+<h1>Scraped data</h1>
+  <div class="filter-links">
+    here filter links
+  </div>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Address</th>
+    <th>Home Details</th>
+    <th>Price</th>
+    <th>Date</th>
+    <th>City</th>
+  </tr>
+
+  <% State.all.each do |state| %>
+    <tr>
+      <td><%= state.id %></td>
+      <td><%= state.address %></td>
+      <td><%= state.home_details %></td>
+      <td><%= state.price %></td>
+      <td><%= state.date %></td>
+      <td><%= state.city %></td>
+    </tr>
+  <% end %>
+</table>
