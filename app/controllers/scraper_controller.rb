@@ -23,6 +23,10 @@ class ScraperController < ApplicationController
       format.csv { send_data @thirty_day_data .to_csv }
     end
   end
+
+  def state
+    State.get_state_data
+  end
 end
 
 

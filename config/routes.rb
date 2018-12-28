@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get '/scraper' => 'scraper#scraper'
   get '/get_7days_data' => 'scraper#get_7days_data'
   get '/get_30days_data' => 'scraper#get_30days_data'
+  get '/state' => 'scraper#state'
 end
 
